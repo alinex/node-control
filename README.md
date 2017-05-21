@@ -1,59 +1,44 @@
-# Alinex Operator
+# Alinex Control
 
 [![GitHub watchers](
-  https://img.shields.io/github/watchers/alinex/node-operator.svg?style=social&label=Watch&maxAge=86400)](
-  https://github.com/alinex/node-operator/subscription)<!-- {.hidden-small} -->
+  https://img.shields.io/github/watchers/alinex/node-control.svg?style=social&label=Watch&maxAge=86400)](
+  https://github.com/alinex/node-control/subscription)<!-- {.hidden-small} -->
 [![GitHub stars](
-  https://img.shields.io/github/stars/alinex/node-operator.svg?style=social&label=Star&maxAge=86400)](
-  https://github.com/alinex/node-operator)
+  https://img.shields.io/github/stars/alinex/node-control.svg?style=social&label=Star&maxAge=86400)](
+  https://github.com/alinex/node-control)
 [![GitHub forks](
-  https://img.shields.io/github/forks/alinex/node-operator.svg?style=social&label=Fork&maxAge=86400)](
-  https://github.com/alinex/node-operator)<!-- {.hidden-small} -->
+  https://img.shields.io/github/forks/alinex/node-control.svg?style=social&label=Fork&maxAge=86400)](
+  https://github.com/alinex/node-control)<!-- {.hidden-small} -->
 <!-- {p:.right} -->
 
 [![npm package](
-  https://img.shields.io/npm/v/alinex-operator.svg?maxAge=86400&label=latest%20version)](
-  https://www.npmjs.com/package/alinex-operator)
+  https://img.shields.io/npm/v/alinex-control.svg?maxAge=86400&label=latest%20version)](
+  https://www.npmjs.com/package/alinex-control)
 [![latest version](
-  https://img.shields.io/npm/l/alinex-operator.svg?maxAge=86400)](
+  https://img.shields.io/npm/l/alinex-control.svg?maxAge=86400)](
   #license)<!-- {.hidden-small} -->
 [![Travis status](
-  https://img.shields.io/travis/alinex/node-operator.svg?maxAge=86400&label=develop)](
-  https://travis-ci.org/alinex/node-operator)
+  https://img.shields.io/travis/alinex/node-control.svg?maxAge=86400&label=develop)](
+  https://travis-ci.org/alinex/node-control)
 [![Gemnasium status](
-  https://img.shields.io/gemnasium/alinex/node-operator.svg?maxAge=86400)](
-  https://gemnasium.com/alinex/node-operator)
+  https://img.shields.io/gemnasium/alinex/node-control.svg?maxAge=86400)](
+  https://gemnasium.com/alinex/node-control)
 [![GitHub issues](
-  https://img.shields.io/github/issues/alinex/node-operator.svg?maxAge=86400)](
-  https://github.com/alinex/node-operator/issues)<!-- {.hidden-small} -->
+  https://img.shields.io/github/issues/alinex/node-control.svg?maxAge=86400)](
+  https://github.com/alinex/node-control/issues)<!-- {.hidden-small} -->
 
-The operator application is a Frontend to manage complex IT structures. It displays
-the complete structure in an object oriented way while objects may be:
-- database objects
-- systems
-- processes with their logs
+The control application is part of the [IT Operator](https://github.com/alinex/node-operator)
+application and serves as the data source for the front-end applications.
 
-These operation objects maybe linked with each other and are allowed to:
-- be searched for
-- display with their data
-- start actions on them
-- monitor them
+## Technologies
 
-In the end it gives you the ability to click your way through all your systems and
-data within some mouseclicks in your browser.
-
-## Architecture
-
-The IT Operator consists of two parts, the [Control](https://github.com/alinex/node-control)
-and the [REST](https://github.com/alinex/node-rest) servers.
-
-![Environment](doc/environment.png)
-
-The [Control](https://github.com/alinex/node-control) server delivers a web application
-and builds the desktop and mobile apps to be used. They are all the same on different
-devices. They all contact and get their data from the central
-[REST](https://github.com/alinex/node-rest) servers which may be load balanced and
-clustered for high scalability.
+- Base Framework [Quasar](http://quasar-framework.org/)
+- Scripting Language [ES6](http://es6-features.org/#Constants) Javascript
+- Client Framework [Vue](https://vuejs.org/)
+- [Vue Router]
+- [Vuex] if building large scale Apps.
+- [Webpack] for tweaking the build system to your specific needs
+- [Cordova] for building native mobile phone Apps out of your Quasar App
 
 ## Usage
 
@@ -64,152 +49,34 @@ the other and maybe also both on one server.
 
 ### Installation
 
+For production use the best way is to install the webserver through
+[IT Operator](https://github.com/alinex/node-operator).
+
+The applications are downloadable under...
+
+### Development
+
 For easy and fast handling use yarn:
 
 ``` bash
 # Install yarn package manager
 $ sudo npm install -g yarn
-# Install the operator
-$ yarn global add https://github.com/alinex/node-operator
-```
-
-Now you may start it:
-``` bash
-$ yarn control  # Start control server
-$ yarn rest     # Start rest server
-$ yarn start    # Start both servers
-```
-
-### Development
-
-For development you should clone from github and install:
-
-``` bash
-# Install yarn package manager
-$ git clone https://github.com/alinex/node-operator
+# Clone from github
+$ git clone https://github.com/alinex/node-control
 # Install the modules
 $ yarn
 ```
 
-Now you may run the development version with hot reloading:
+Now you may run the development version with hot reloading or in the production
+version:
 
 ``` bash
-# Start both server
-$ yarn dev
+
+$ yarn dev      # serve with hot reload at localhost:8080
+$ yarn lint     # lint code
+
+$ yarn build    # build for production with minification
 ```
-
-You may also run each of them individually in their modules.
-
-
-## Page Structure
-
-__Basic Pages__
-
-    /           System Start
-    /login      Login Page
-
-## REST API
-
-In the following paragraphs some of the API calls are described with:
-- Http Method
-- URI
-- Query Parameter (starting with '?')
-- Post Parameter
-- Group allowed (starting with '@')
-
-In general `GET` and `HEAD` are always the same but without values in `HEAD`.
-
-__General Scheme__
-
-    HEAD    /api/<group>/<object>/<access>  // check for existence
-    GET     /api/<group>/<object>/<access>  // get object(s)/<value>
-    POST    /api/<group>/<object>/<access>  // change object(s)
-    PUT     /api/<group>/<object>/<access>  // add/replace object(s)
-    DELETE  /api/<group>/<object>/<access>  // delete object(s)
-
-
-Search for objects:
-
-    HEAD    /api/db/person/search/name/Hund
-    GET     /api/db/person/search/name/Hund
-    GET     /api/db/person/search
-            ?status_type_id=999009&name=%Hund%
-
-Accessing an individual object:
-
-    HEAD    /api/db/person/id/12345678
-    GET     /api/db/person/id/12345678
-
-Change object (changes in POST-DATA):
-
-    POST    /api/db/person/id/12345678
-            status_type_id=999020
-    POST    /api/db/person/search/name/Hund
-            status_type_id=999020
-    POST    /api/db/person/search
-            ?status_type_id=999009&name=%Hund%
-            status_type_id=999020
-
-Insert/replace/remove the object completely:
-
-    PUT     /api/db/person
-            name=..., ...
-    PUT     /api/db/person/id/12345678
-            name=..., ...
-    DELETE  /api/db/person/id/12345678
-
-__Response__
-
-The response will always be json:
-
-    # identification
-    date: <Date>
-    uri: <String>
-    statusCode: <Integer>
-    message: <String>
-
-If the response contains some data it will also have:
-
-    # meta information
-    meta:
-      title: <String>
-      description: <String>
-      data: HashMap cols<Object>
-    # content data
-    data: Array<Object rows>
-
-### Access Management
-
-The rights are based on the groups in which an user is member of. It is persisted
-within a json file on disk.
-
-__Authentication__
-
-    POST    /api/access/auth/login
-            user=<string>, password=<string>
-    POST    /api/access/auth/logout
-
-__User Management__
-
-    GET     /api/access/user                   @admin
-            ?email=<string>
-    GET     /api/access/user/<string>                         // nopasswd
-    PUT     /api/access/user/<string>                         // register
-            password=<string>, email=<string>
-    POST    /api/access/user/<string>          @self, @admin
-            password=<string>, email=<string>
-    DELETE  /api/access/user/<string>          @self, @admin
-
-__Groups__
-
-    GET     /api/access/group                                 // rights  
-            ?user=<string>
-    GET     /api/access/group/<string>                        // users          
-    PUT     /api/access/group/<string>         @admin         // new group
-    DELETE  /api/access/group/<string>         @admin         // remove group
-    PUT     /api/access/group/<string>/member/<string>  @admin
-    DELETE  /api/access/group/<string>/member/<string>  @admin
-
 
 ## License
 
