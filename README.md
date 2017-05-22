@@ -27,18 +27,21 @@
   https://img.shields.io/github/issues/alinex/node-control.svg?maxAge=86400)](
   https://github.com/alinex/node-control/issues)<!-- {.hidden-small} -->
 
+__Current State: In initial phase - not doing much.__
+
 The control application is part of the [IT Operator](https://github.com/alinex/node-operator)
 application and serves as the data source for the front-end applications.
 
 ## Technologies
 
-- Base Framework [Quasar](http://quasar-framework.org/)
-- Scripting Language [ES6](http://es6-features.org/#Constants) Javascript
-- Client Framework [Vue](https://vuejs.org/)
-- [Vue Router]
-- [Vuex] if building large scale Apps.
-- [Webpack] for tweaking the build system to your specific needs
-- [Cordova] for building native mobile phone Apps out of your Quasar App
+- Language [ES6](http://es6-features.org/#Constants) Javascript under [NodeJS](https://nodejs.org/en/)
+- Base NodeJS framework [Quasar](http://quasar-framework.org/)
+- Client JavaScript framework [Vue](https://vuejs.org/)
+- Client routing with [Vue Router](http://router.vuejs.org/en/)
+- State management [Vuex](https://vuex.vuejs.org/en/)
+- Web application bundler [Webpack](https://webpack.js.org/)
+- Cross platform desktop apps based on [electron](https://electron.atom.io/)
+- Native mobile Apps using [Cordova](https://cordova.apache.org/)
 
 ## Usage
 
