@@ -16,11 +16,6 @@ lib-cov
 coverage
 .nyc_output
 
-# test tools
-selenium-debug.log
-test/unit/coverage
-test/e2e/reports
-
 # Build tools like npm, yarn, grunt or bower
 .grunt
 bower_components
@@ -36,10 +31,12 @@ bower_components
 node_modules/
 jspm_packages/
 
-# Compiled code
-dist
-cordova/platforms
-cordova/plugins
+# Development folder
+doc
+book.json
+src
+test
+/.*
 
 # Runtime data
 local
