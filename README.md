@@ -32,32 +32,21 @@ __Current State: In initial phase - not doing much.__
 The control application is part of the [IT Operator](https://github.com/alinex/node-operator)
 application and serves as the data source for the front-end applications.
 
-## Technologies
 
-- Language [ES6](http://es6-features.org/#Constants) Javascript under [NodeJS](https://nodejs.org/en/)
-- Base NodeJS framework [Quasar](http://quasar-framework.org/)
-- Client JavaScript framework [Vue](https://vuejs.org/)
-- Client routing with [Vue Router](http://router.vuejs.org/en/)
-- State management [Vuex](https://vuex.vuejs.org/en/)
-- Web application bundler [Webpack](https://webpack.js.org/)
-- Cross platform desktop apps based on [electron](https://electron.atom.io/)
-- Native mobile Apps using [Cordova](https://cordova.apache.org/)
-
-## Usage
-
-**In the moment this is in heavy development and not really ready for productive use.**
-
-The Operator contains both, the Control and REST server, so you may start one or
-the other and maybe also both on one server.
-
-### Installation
+## Installation
 
 For production use the best way is to install the webserver through
 [IT Operator](https://github.com/alinex/node-operator).
 
 The applications are downloadable under...
 
-### Development
+
+## Usage
+
+Coming soon...
+
+
+## Development
 
 For easy and fast handling use yarn:
 
@@ -80,6 +69,7 @@ $ yarn lint     # lint code
 
 $ yarn build    # build for production with minification
 ```
+
 
 ## License
 
