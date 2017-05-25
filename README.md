@@ -27,56 +27,14 @@
   https://img.shields.io/github/issues/alinex/node-control.svg?maxAge=86400)](
   https://github.com/alinex/node-control/issues)<!-- {.hidden-small} -->
 
-The control application is part of the [IT Operator](https://github.com/alinex/node-operator)
-application and serves as the data source for the front-end applications.
+**In the moment this is in heavy development and not really ready for productive use.**
 
-## Technologies
+The control application is part of the [Operator](https://github.com/alinex/node-operator)
+application and serves as the front end to the data source and processing server.
 
-- Base Framework [Quasar](http://quasar-framework.org/)
-- Scripting Language [ES6](http://es6-features.org/#Constants) Javascript
-- Client Framework [Vue](https://vuejs.org/)
-- [Vue Router]
-- [Vuex] if building large scale Apps.
-- [Webpack] for tweaking the build system to your specific needs
-- [Cordova] for building native mobile phone Apps out of your Quasar App
 
 ## Usage
 
-**In the moment this is in heavy development and not really ready for productive use.**
-
-The Operator contains both, the Control and REST server, so you may start one or
-the other and maybe also both on one server.
-
-### Installation
-
-For production use the best way is to install the webserver through
-[IT Operator](https://github.com/alinex/node-operator).
-
-The applications are downloadable under...
-
-### Development
-
-For easy and fast handling use yarn:
-
-``` bash
-# Install yarn package manager
-$ sudo npm install -g yarn
-# Clone from github
-$ git clone https://github.com/alinex/node-control
-# Install the modules
-$ yarn
-```
-
-Now you may run the development version with hot reloading or in the production
-version:
-
-``` bash
-
-$ yarn dev      # serve with hot reload at localhost:8080
-$ yarn lint     # lint code
-
-$ yarn build    # build for production with minification
-```
 
 ## License
 
