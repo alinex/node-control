@@ -4,7 +4,6 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-selenium-debug.log
 
 # Runtime data
 pids
@@ -32,14 +31,13 @@ bower_components
 node_modules/
 jspm_packages/
 
-# Compiled code
-dist
-cordova/platforms
-cordova/plugins
-
-# Test results
-test/unit/coverage
-test/e2e/reports
+# Development folder
+doc
+book.json
+src
+test
+/.*
+cordova
 
 # Runtime data
 local
