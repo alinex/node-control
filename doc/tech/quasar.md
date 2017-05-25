@@ -10,6 +10,23 @@ It is aimed for
 - Mobile apps (Android + IOS)
 - Desktop application
 
+## Feratures
+
+While developing the server has:
+
+- Webbpack + vue-loader for single file Vue components
+- State preserving hot-reload
+- State preserving compilation error overlay
+- Lint-on-save with ESLint
+- Source maps
+
+Building the productive app:
+
+ - Javascript minified with UglifyJS
+ - HTML minified with html-minifier
+ - CSS across all components extracted into a single file and minified with cssnano
+ - All static assets compiled with version hashes for efficient long-term caching, and a production index.html is auto-generated with proper URLs to these generated assets
+
 
 ## Information
 
