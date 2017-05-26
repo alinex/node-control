@@ -3,6 +3,7 @@
 The control application is part of the [Alinex Operator](https://alinex.gitbook.io/operator)
 application and serves as the data source for the front-end applications.
 
+
 ## Technologies
 
 - Language [ES6](http://es6-features.org/#Constants) Javascript under [NodeJS](https://nodejs.org/en/)
@@ -13,3 +14,6 @@ application and serves as the data source for the front-end applications.
 - Web application bundler [Webpack](https://webpack.js.org/)
 - Cross platform desktop apps based on [electron](https://electron.atom.io/)
 - Native mobile Apps using [Cordova](https://cordova.apache.org/)
+
+
+## Information
