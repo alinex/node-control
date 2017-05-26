@@ -15,7 +15,7 @@
       </button>
 
       <q-toolbar-title :padding="2">
-        Alinex Control
+        Alinex Control 3333
       </q-toolbar-title>
 
       <button @click="trigger()">
