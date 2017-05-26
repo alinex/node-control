@@ -44,15 +44,15 @@ export default {
   .error-code
     height 50vh
     width 100%
-    padding-top 15vh
-    font-size 30vmax
+    padding-top 0
+    font-size 25vmax
     color rgba(255, 255, 255, .2)
     overflow hidden
   .error-card
-    margin-top -25px
+    margin-top -10vh
     width 90vw
     max-width 600px
-    padding 50px
+    padding 5vw
     i
       font-size 5rem
 </style>

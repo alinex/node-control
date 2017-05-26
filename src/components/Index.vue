@@ -1,9 +1,30 @@
 <template>
   <q-layout>
+
+    <q-modal ref="basicModal">
+      <h4>Basic Modal</h4>
+      <button class="primary" @click="$refs.basicModal.close()">Close</button>
+    </q-modal>
+
     <div slot="header" class="toolbar">
-      <q-toolbar-title :padding="0">
-        Quasar Framework v{{$q.version}}
+      <button
+        class="hide-on-drawer-visible"
+        @click="$refs.drawer.open()"
+      >
+        <i>menu</i>
+      </button>
+
+      <q-toolbar-title :padding="2">
+        Alinex Control 3333
       </q-toolbar-title>
+
+      <button @click="trigger()">
+        <i>mail</i>
+      </button>
+      <button @click="$refs.basicModal.open()">
+        <i>alarm</i>
+      </button>
+
     </div>
 
     <!--
@@ -70,6 +91,14 @@ export default {
     }
   },
   methods: {
+    trigger () {
+      this.$refs.bar.start()
+      setTimeout(() => {
+        if (this.$refs.bar) {
+          this.$refs.bar.stop()
+        }
+      }, Math.random() * 5000 + 2000)
+    },
     move (evt) {
       const {width, height} = Utils.dom.viewport()
       const {top, left} = Utils.event.position(evt)

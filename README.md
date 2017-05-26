@@ -27,6 +27,7 @@
   https://img.shields.io/github/issues/alinex/node-control.svg?maxAge=86400)](
   https://github.com/alinex/node-control/issues)<!-- {.hidden-small} -->
 
+<<<<<<< HEAD
 **In the moment this is in heavy development and not really ready for productive use.**
 
 The control application is part of the [Operator](https://github.com/alinex/node-operator)
@@ -34,6 +35,48 @@ application and serves as the front end to the data source and processing server
 
 
 ## Usage
+=======
+__Current State: In initial phase - not doing much.__
+
+The control application is part of the [IT Operator](https://github.com/alinex/node-operator)
+application and serves as the data source for the front-end applications.
+
+
+## Installation
+
+For production use the best way is to install the webserver through
+[IT Operator](https://github.com/alinex/node-operator).
+
+The applications are downloadable under...
+
+
+## Usage
+
+Coming soon...
+
+
+## Development
+
+For easy and fast handling use yarn:
+
+``` bash
+# Install yarn package manager
+$ sudo npm install -g yarn
+# Clone from github
+$ git clone https://github.com/alinex/node-control
+# Install the modules
+$ yarn
+```
+
+Now you may run the development version with hot reloading or in the production
+version:
+
+``` bash
+
+$ yarn dev      # serve with hot reload at localhost:8080
+$ yarn lint     # lint code
+>>>>>>> 8bcb5134c8c8a647bcfbd1ab9c28c5cec77674b8
+
 
 
 ## License
