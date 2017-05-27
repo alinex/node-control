@@ -21,7 +21,17 @@ export default new VueRouter({
    */
 
   routes: [
-    { path: '/', component: load('Index') }, // Default
-    { path: '*', component: load('Error404') } // Not found
+    { path: '/', component: load('index') }, // Default
+    { path: '*', component: load('error404') }, // Not found
+    {
+      path: '/showcase/layout',
+      component: load('showcase/layout/layout'),
+      children: [
+        {path: '', component: load('showcase/layout/about')},
+        {path: 'toolbar', component: load('showcase/layout/toolbar')},
+        {path: 'tabs', component: load('showcase/layout/tabs')},
+        {path: 'drawer', component: load('showcase/layout/drawer')}
+      ]
+    }
   ]
 })
